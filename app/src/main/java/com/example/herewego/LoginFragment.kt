@@ -59,7 +59,8 @@ class LoginFragment : Fragment() {
                     if (check_user.get("user_authenticated").toString() == "Success") {
                         val gotresponse = registeredEvents(username)
                         Users.setResponse(gotresponse)
-                        (activity as NavigationHost).navigateTo(RegisteredEvents(), false)
+                        Users.setUsername(username)
+                        (activity as NavigationHost).navigateTo(NavigateFragment(), true)
                     } else {
 
                         getActivity()?.runOnUiThread() {
