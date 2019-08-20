@@ -9,6 +9,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools">
 
+
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -18,14 +19,20 @@
             android:textColor="#000"
             android:text="All Events Available"/>
 
-
-
-    <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/show_events_view"
+    <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/join_event_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            xmlns:android="http://schemas.android.com/apk/res/android">
-    </androidx.recyclerview.widget.RecyclerView>
+            android:layout_margin="4dp"
+            android:hint="Event ID"
+            app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/event_id_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
             android:id="@+id/join_event_button"
@@ -34,5 +41,15 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
             android:layout_marginRight="12dp"
-            android:text="Join Event" />
+            android:text="Join Event" android:background="#3F51B5" android:textColorHighlight="#F44336"
+            android:textColor="#2196F3"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/show_events_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+    </androidx.recyclerview.widget.RecyclerView>
+
+
 </LinearLayout>

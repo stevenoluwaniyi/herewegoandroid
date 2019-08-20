@@ -28,5 +28,5 @@
     <string name="searchbutton"> Search Event</string>
     <string name="error_search"> Event does not exist. Please check event name is correct</string>
     <string name="event_capacity"> Event is at capacity. Please try another event</string>
-    <string name="event_not_found"> Event is not found.Please check list for available events</string>
+    <string name="already_registered"> Already Registered!</string>
 </resources>

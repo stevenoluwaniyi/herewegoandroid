@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.squareup.okhttp.OkHttpClient
 import com.squareup.okhttp.Request
 import kotlinx.android.synthetic.main.eventsearch_fragment.*
@@ -27,14 +28,16 @@ class JoinEvent : Fragment() {
 
     private fun populateData() : List<ShowEvent>{
         var value : ShowEvent = ShowEvent("","","","","","","","")
+        var myList: List<ShowEvent> = listOf()
         for(i in 0..(event_array.length() - 1 )){
             val events = event_array.getJSONObject(i)
             value = (ShowEvent(events.get("event_id").toString(),events.get("event_name").toString(),events.get("event_type").toString(),events.get("event_city").toString(),events.get("event_start").toString(),
                 events.get("event_end").toString(),events.get("venue_name").toString(),events.get("event_description").toString()))
+            myList += value
 
         }
 
-        return listOf(value)
+        return myList
     }
 
     private val events_list = populateData()
@@ -72,7 +75,7 @@ class JoinEvent : Fragment() {
 
                     } else {
                         getActivity()?.runOnUiThread() {
-                            join_event_id.error = getString(R.string.event_not_found)
+                            join_event_id.error = getString(R.string.already_registered)
                         }
 
                     }
