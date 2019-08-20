@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Herewego</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="button_login">Login</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_register">Register</string>
+    <string name="error_password">User does not exist or password is not valid. Please check credentials or register</string>
+    <string name="password_match">Passwords do not match. Please make sure passwords match</string>
+    <string name="button_logout">Logout</string>
+    <string name="register_name">Register</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="unsuccessful_registration">Unsuccessful Registration</string>
+    <string name="age">Age</string>
+    <string name="email">Email</string>
+    <string name="create_password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="eventtype"> Event Type</string>
+    <string name="eventname"> Event Name</string>
+    <string name="eventcity"> Event City</string>
+    <string name="eventstart"> Start</string>
+    <string name="eventend"> End</string>
+    <string name="venuename"> Venue Name</string>
+    <string name="venueaddress"> Address</string>
+    <string name="searchevent"> Search Event</string>
+    <string name="searchbutton"> Search Event</string>
+    <string name="error_search"> Event does not exist. Please check event name is correct</string>
+
+
+</resources>
