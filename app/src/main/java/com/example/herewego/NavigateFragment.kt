@@ -45,7 +45,7 @@ class NavigateFragment : Fragment() {
         view.joinevents.setOnClickListener {
             doAsync {
                 try {
-                    (activity as NavigationHost).navigateTo(SearchEvent(), true)
+                    (activity as NavigationHost).navigateTo(JoinEvent(), true)
                 }
                 catch (e: Exception){
                     println(e)

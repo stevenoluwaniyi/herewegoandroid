@@ -34,7 +34,7 @@ class SearchEvent : Fragment() {
                     val search_event_name = fetchevents(event_name)
                     val event_json = JSONObject(search_event_name)
                     if(event_json.get("event_found") == "True"){
-                        search_event_text.error = null
+                        //search_event_text.error = null
                         (activity as NavigationHost).navigateTo(EventSearchFragment(event_name), true)
                     }
                     else {
@@ -79,7 +79,7 @@ class SearchEvent : Fragment() {
 
 
     private fun fetchevents(event_name: String?): String? {
-        val url = "https://herewegoadi.appspot.com/apisearchevent"
+        val url = "https://6b322f37.ngrok.io/apisearchevent"
         val json = """
     {
         "event_name":"${event_name}"

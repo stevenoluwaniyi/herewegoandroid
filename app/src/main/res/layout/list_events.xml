@@ -23,6 +23,15 @@
             android:layout_gravity="left"
             android:paddingLeft="16dp"
             android:text="@string/eventtype"/>
+
+    <TextView
+            android:id="@+id/eventID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="16dp"
+            android:text="@string/eventtype"/>
+
     <TextView
             android:id="@+id/event_city"
             android:layout_width="wrap_content"

@@ -80,7 +80,7 @@ class LoginFragment : Fragment() {
     }
 
      fun validateLogin(username:String?, password:Editable?): String {
-        val url = "https://herewegoadi.appspot.com/apilogin/" + username + "/" + password
+        val url = "https://6b322f37.ngrok.io/apilogin/" + username + "/" + password
         val client = OkHttpClient()
         val request = Request.Builder()
             .url(url)
@@ -99,7 +99,7 @@ class LoginFragment : Fragment() {
     fun registeredEvents(
         username: String?
     ): String {
-        val url = "https://herewegoadi.appspot.com/userpagejson"
+        val url = "https://6b322f37.ngrok.io/userpagejson"
         val json = """
 {
     "user":"${username}"

@@ -107,7 +107,7 @@ class RegisterFragment : Fragment() {
         password: Editable?,
         phone: String?
     ): String {
-        val url = "https://herewegoadi.appspot.com/apiregister"
+        val url = "https://6b322f37.ngrok.io/apiregister"
 
         val password_string = password.toString()
         val json = """

@@ -1,48 +1,18 @@
 package com.example.herewego
 
-import androidx.fragment.app.Fragment
+//import com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
-import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.squareup.okhttp.MediaType
-import kotlinx.android.synthetic.main.eventsearch_fragment.*
-import kotlinx.android.synthetic.main.list_events.view.*
-import kotlinx.android.synthetic.main.list_events.*
-import kotlinx.android.synthetic.main.eventsearch_fragment.view.list_recycler_view
-import kotlinx.android.synthetic.main.activity_main.*
 import com.squareup.okhttp.OkHttpClient
 import com.squareup.okhttp.Request
 import com.squareup.okhttp.RequestBody
-import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.activityUiThread
-import org.jetbrains.anko.doAsync
+import kotlinx.android.synthetic.main.eventsearch_fragment.*
 import org.json.JSONArray
-import org.json.JSONObject
-import java.lang.Exception
-import android.R
-import android.R.attr.colorAccent
-import android.graphics.Color
-import androidx.core.content.ContextCompat
-import android.graphics.Typeface
-import android.system.Os.bind
-//import com.sun.xml.internal.fastinfoset.alphabet.BuiltInRestrictedAlphabets.table
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TableRow.LayoutParams;
-import android.widget.TextView;
-import android.widget.Toast;
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.ListAdapter
-import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
-import kotlinx.android.synthetic.main.search_fragment.*
-import kotlin.properties.Delegates
 
 
 class EventSearchFragment(val event : String?) : Fragment() {
@@ -112,7 +82,7 @@ class EventSearchFragment(val event : String?) : Fragment() {
 
 
    private fun fetchevents(event_name: String?): String? {
-        val url = "https://herewegoadi.appspot.com/apisearchevent"
+        val url = "https://6b322f37.ngrok.io/apisearchevent"
         val json = """
     {
         "event_name":"${event_name}"

@@ -6,16 +6,16 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 
-class ListAdapter(private val list: List<Event>)
-    : RecyclerView.Adapter<EventViewHolder>() {
+class ShowEventAdapter(private val list: List<ShowEvent>)
+    : RecyclerView.Adapter<ShowEventHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ShowEventHolder {
         val inflater = LayoutInflater.from(parent.context)
-        return EventViewHolder(inflater, parent)
+        return ShowEventHolder(inflater, parent)
     }
 
-    override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
-        val event: Event = list[position]
+    override fun onBindViewHolder(holder: ShowEventHolder, position: Int) {
+        val event: ShowEvent = list[position]
         holder.bind(event)
     }
 
